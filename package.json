@@ -1,0 +1,23 @@
+{
+  "name": "baiduwaimai_h5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "git add . && git commit -m \"commit\" && git pull && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyeexin/baiduwaimai_H5.git"
+  },
+  "author": "yyeexin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yyeexin/baiduwaimai_H5/issues"
+  },
+  "homepage": "https://github.com/yyeexin/baiduwaimai_H5#readme"
+}
