@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        console.log(document.documentElement.clientWidth)
+        console.log(window.screen.width)
+        document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px'
+        window.onresize = function () {
+            document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px'
+        }
+    </script>
     <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
     <style>
         html,
@@ -63,8 +71,8 @@
     <div class="welcome"></div>
     <script src="./lib/swiper/swiper.min.js"></script>
     <script src="./lib/zepto/zepto.js"></script>
-    <script src="./lib/zepto/touch.js"></script>
     <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
     <script src="./lib/zepto/fx.js"></script>
     <script src="./lib/zepto/fx_methods.js"></script>
     <script>
