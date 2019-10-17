@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<script>
+			document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px'
+			window.onresize = function() {
+				document.querySelector('html').style.fontSize = window.screen.width / 20 + 'px'
+			}
+		</script>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">1</div>
+				<div class="swiper-slide">2</div>
+				<div class="swiper-slide">3</div>
+				<div class="swiper-slide">4</div>
+				<div class="swiper-slide">5</div>
+				<div class="swiper-slide">6</div>
+				<div class="swiper-slide">7</div>
+			</div>
+		</div>
+		<div class="loading"></div>
+		<div class="welcome"></div>
+		<script src="./index.js"></script>
+	</body>
+</html>
