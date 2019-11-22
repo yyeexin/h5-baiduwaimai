@@ -1,0 +1,36 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.swiper-container {
+	height: 100%;
+}
+
+.swiper-slide {
+	box-sizing: border-box;
+	font-size: 100px;
+	border: 10px solid hotpink;
+}
+
+.loading {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	background-color: lightseagreen;
+}
+
+.welcome {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	background-color: limegreen;
+}
