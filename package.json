@@ -22,9 +22,9 @@
 	},
 	"homepage": "https://github.com/yyeexin/baiduwaimai_H5#readme",
 	"dependencies": {
-		"swiper": "^5.1.0"
+		"swiper": "^5.2.1"
 	},
 	"devDependencies": {
-		"sass": "^1.23.0"
+		"sass": "^1.23.7"
 	}
 }
