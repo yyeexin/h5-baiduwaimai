@@ -1,23 +1,21 @@
 @import './css/normalize.scss';
 @import './css/base.scss';
 
-body {
-	width: 100vw;
-	min-height: 100vh;
+@function p2v($size) {
+	@return ($size/640) * 100vw;
 }
-.wiper-container {
-	width: 100%;
+
+html,
+body {
 	height: 100%;
-	.swiper-wrapper {
-		height: 100%;
-		width: 100%;
-	}
+}
+.swiper-container {
+	height: 100%;
 }
 .swiper-slide {
-	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	border: 10px solid hotpink;
+	border: 1px solid hotpink;
 }
 
 .loading {
@@ -26,7 +24,52 @@ body {
 	position: absolute;
 	top: 0;
 	z-index: 2;
-	background-color: lightseagreen;
+	background-color: #ffece9;
+	.rider {
+		width: (154/640) * 100vw;
+		height: (121/640) * 100vw;
+		background: url('./image/loading/rider1_.png') no-repeat center / 100% 100%;
+		position: absolute;
+		top: (233/640) * 100vw;
+		right: (108/640) * 100vw;
+	}
+	.progress {
+		width: (416/640) * 100vw;
+		height: (20/640) * 100vw;
+		background-color: #fc2e4d;
+		border: 2px solid #373838;
+		border-radius: (20/640) * 100vw;
+		position: absolute;
+		left: 50%;
+		margin-left: (-416/640/2) * 100vw;
+		top: p2v(360);
+	}
+	.info {
+		width: p2v(220);
+		height: p2v(28);
+		background: url('./image/loading/loading-txt.png') no-repeat center / 100% 100%;
+		position: absolute;
+		left: 50%;
+		margin-left: p2v(-220/2);
+		top: p2v(420);
+	}
+	.logo {
+		width: p2v(162);
+		height: p2v(39);
+		background: url('./image/loading/waimai-logo.png') no-repeat center / 100% 100%;
+		position: absolute;
+		bottom: p2v(118);
+		left: 50%;
+		margin-left: p2v(-162/2);
+	}
+	.copyright {
+		font-size: p2v(24);
+		color: #e0979d;
+		position: absolute;
+		bottom: p2v(73);
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .welcome {
