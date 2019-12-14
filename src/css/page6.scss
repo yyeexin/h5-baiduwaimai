@@ -1,0 +1,89 @@
+.page6 {
+	position: relative;
+	background-color: #b527a0;
+	.bg {
+		@include bgc('../image/page7/bg8.png', 588);
+		@include size(588, 333);
+		bottom: p2v(300);
+	}
+	.bear {
+		@include bgc('../image/page7/bear5.png', 285);
+		@include size(285, 328);
+		bottom: p2v(200);
+		z-index: 1;
+		.gift-box {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			/*
+                为了错开 熊腿 旋转的 角度 不能转满 360%
+                350 / 12 =29
+            */
+			.gift1 {
+				@include bgc('../image/page7/gift1.png', 35);
+				@include size(35, 29);
+				transform: rotateZ(28deg) translateY(p2v(240));
+			}
+			.gift2 {
+				@include bgc('../image/page7/gift2.png', 93);
+				@include size(93, 79);
+				transform: rotateZ(28deg * 2) translateY(p2v(240));
+			}
+			.gift3 {
+				@include bgc('../image/page7/gift3.png', 72);
+				@include size(72, 64);
+				transform: rotateZ(28deg * 3) translateY(p2v(240));
+			}
+			.gift4 {
+				@include bgc('../image/page7/gift4.png', 91);
+				@include size(91, 73);
+				transform: rotateZ(28deg * 4) translateY(p2v(240));
+			}
+			.gift5 {
+				@include bgc('../image/page7/gift5.png', 99);
+				@include size(99, 65);
+				transform: rotateZ(28deg * 5) translateY(p2v(240));
+			}
+			.gift6 {
+				@include bgc('../image/page7/gift6.png', 107);
+				@include size(107, 80);
+				transform: rotateZ(28deg * 6) translateY(p2v(240));
+			}
+			.gift7 {
+				@include bgc('../image/page7/gift7.png', 107);
+				@include size(107, 80);
+				transform: rotateZ(28deg * 7) translateY(p2v(240));
+			}
+			.gift8 {
+				@include bgc('../image/page7/gift8.png', 88);
+				@include size(88, 64);
+				transform: rotateZ(28deg * 8) translateY(p2v(240));
+			}
+			.gift9 {
+				@include bgc('../image/page7/gift9.png', 78);
+				@include size(78, 50);
+				transform: rotateZ(28deg * 9) translateY(p2v(240));
+			}
+			.gift10 {
+				@include bgc('../image/page7/gift10.png', 49);
+				@include size(49, 37);
+				transform: rotateZ(28deg * 10) translateY(p2v(240));
+			}
+			.gift11 {
+				@include bgc('../image/page7/gift11.png', 51);
+				@include size(51, 31);
+				transform: rotateZ(28deg * 11) translateY(p2v(240));
+			}
+			.gift12 {
+				@include bgc('../image/page7/gift12.png', 37);
+				@include size(37, 23);
+				transform: rotateZ(28deg * 12-5deg) translateY(p2v(240));
+			}
+		}
+	}
+	.sphere {
+		@include bg('../image/page7/sphere6.png');
+		@include size(640, 356);
+		bottom: 0;
+	}
+}

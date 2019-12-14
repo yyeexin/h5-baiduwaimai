@@ -1,0 +1,46 @@
+.page7 {
+	position: relative;
+	background-color: #19072a;
+	.streetlight {
+		@include bg('../image/page8/streetlight.png');
+		@include size(80, 443);
+		bottom: p2v(300);
+		left: p2v(240);
+		.light {
+			@include bg('../image/page8/lamplight.png');
+			@include size(437, 427);
+			top: p2v(10);
+			left: p2v(-140);
+		}
+	}
+	.bear {
+		@include bg('../image/page8/bear6.png');
+		@include size(276, 271);
+		left: p2v(230);
+		bottom: p2v(280);
+	}
+	.motobike {
+		@include bg('../image/page8/moto.png');
+		@include size(200, 137);
+		bottom: p2v(335);
+		left: p2v(110);
+	}
+	.share {
+		@include bgc('../image/page8/share.png', 379);
+		@include size(379, 113);
+		bottom: p2v(140);
+	}
+	.info {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		font-size: p2v(24);
+		color: #b579d6;
+		bottom: p2v(70);
+	}
+	.sphere {
+		@include bg('../image/page8/sphere7.png');
+		@include size(640, 384);
+		bottom: 0;
+	}
+}

@@ -1,0 +1,62 @@
+.page2 {
+	position: relative;
+	background-color: #ee4143;
+	.bg {
+		@include bgc('../image/page3/bg4_.png', 592);
+		@include size(592, 490);
+		bottom: p2v(330);
+	}
+	.bear {
+		background-image: url('../image/page3/bear2.png');
+		background-repeat: no-repeat;
+		background-size: p2v(368) p2v(427);
+		background-position: p2v(-103) p2v(-96);
+		position: absolute;
+		bottom: p2v(310);
+		left: 50%;
+		@include size(227, 336);
+		margin-left: p2v(-227/2);
+		z-index: 1;
+		.face1 {
+			@include bg('../image/page3/face1.png');
+			@include size(102, 102);
+			top: 0;
+			left: p2v(-102);
+		}
+		.face2 {
+			@include bg('../image/page3/face2.png');
+			@include size(101, 102);
+			top: p2v(-102);
+			right: p2v(-101/2);
+		}
+		.hand-left {
+			@include bg('../image/page3/hand-left_.png');
+			@include size(74, 77);
+			top: p2v(180);
+			left: p2v(30);
+		}
+		.hand-right {
+			@include bg('../image/page3/hand-right.png');
+			@include size(74, 77);
+			top: p2v(180);
+			right: p2v(30);
+		}
+	}
+	.sphere {
+		@include bg('../image/page3/sphere2.png');
+		@include size(640, 356);
+		bottom: 0;
+	}
+	.table {
+		@include bgc('../image/page3/table.png', 514);
+		@include size(514, 258);
+		bottom: p2v(140);
+		z-index: 1;
+	}
+	.food {
+		@include bgc('../image/page3/foods.png', 354);
+		@include size(354, 152);
+		bottom: p2v(330);
+		z-index: 1;
+	}
+}

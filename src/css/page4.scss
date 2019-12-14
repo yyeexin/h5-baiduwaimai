@@ -1,0 +1,38 @@
+.page4 {
+	position: relative;
+	background-color: #3fa100;
+	.bg {
+		@include bgc('../image/page5/bg6.png', 588);
+		@include size(588, 333);
+		bottom: p2v(300);
+	}
+	.bear {
+		@include bg('../image/page5/bear4.png');
+		@include size(309, 325);
+		bottom: p2v(170);
+		left: p2v(200);
+		z-index: 1;
+	}
+	.sphere {
+		@include bg('../image/page5/sphere4.png');
+		@include size(640, 356);
+		bottom: 0;
+	}
+	.card1 {
+		@include bg('../image/page5/card1.png');
+		@include size(160, 175);
+		bottom: p2v(435);
+		left: p2v(32);
+	}
+	.card2 {
+		@include bgc('../image/page5/card2.png', 161);
+		@include size(161, 209);
+		bottom: p2v(530);
+	}
+	.card3 {
+		@include bg('../image/page5/card3.png');
+		@include size(167, 184);
+		bottom: p2v(420);
+		right: p2v(45);
+	}
+}

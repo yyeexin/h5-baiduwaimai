@@ -1,0 +1,37 @@
+.page3 {
+	position: relative;
+	background-color: #dd8a03;
+	.bg {
+		@include bgc('../image/page4/bg5.png', 592);
+		@include size(592, 580);
+		bottom: p2v(300);
+	}
+	.bear {
+		@include bgc('../image/page4/bear3.png', 206);
+		@include size(206, 321);
+		bottom: p2v(195);
+		z-index: 1;
+	}
+	.sphere {
+		@include bg('../image/page4/sphere3.png');
+		@include size(640, 356);
+		bottom: 0;
+	}
+	.license {
+		@include bg('../image/page4/license.png');
+		@include size(197, 140);
+		bottom: p2v(500);
+		left: p2v(40);
+	}
+	.oil {
+		@include bgc('../image/page4/oil.png', 205);
+		@include size(205, 107);
+		bottom: p2v(660);
+	}
+	.evil {
+		@include bg('../image/page4/evil2.png');
+		@include size(198, 163);
+		bottom: p2v(480);
+		right: p2v(30);
+	}
+}

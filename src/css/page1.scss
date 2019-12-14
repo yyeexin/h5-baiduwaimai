@@ -1,0 +1,188 @@
+.page1 {
+	position: relative;
+	background-color: #be8651;
+	.scroll-page1 {
+		.bg {
+			@include bgc('../image/page2/bg1.png', 576);
+			@include size(576, 573);
+			bottom: p2v(252);
+		}
+		.person {
+			@include bgc('../image/page2/front1.png', 439);
+			@include size(439, 349);
+			bottom: p2v(290);
+			z-index: 1;
+			.files {
+				background-image: url('../image/page2/papers.png');
+				background-repeat: no-repeat;
+				background-position: bottom right;
+				background-size: p2v(115) p2v(114);
+				@include size(85, 50);
+				bottom: p2v(104);
+				left: p2v(27);
+				position: absolute;
+				.paper1 {
+					background-image: url('../image/page2/papers.png');
+					background-repeat: no-repeat;
+					background-position: 0 p2v(-32);
+					background-size: p2v(115) p2v(114);
+					@include size(86, 26);
+					bottom: p2v(45);
+					left: p2v(-70);
+					position: absolute;
+				}
+				.paper2 {
+					background-image: url('../image/page2/papers.png');
+					background-repeat: no-repeat;
+					background-position: p2v(-45) 0;
+					background-size: p2v(115) p2v(114);
+					@include size(64, 20);
+					bottom: p2v(80);
+					right: 0;
+					position: absolute;
+				}
+			}
+		}
+		.message-container {
+			@include bg('../image/page2/txt-bubbl.png');
+			@include size(363, 119);
+			bottom: p2v(140);
+			right: p2v(140);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			.info {
+				@include bg('../image/page2/txt-work.png');
+				@include size(220, 30);
+			}
+		}
+	}
+	.scroll-page2 {
+		display: none;
+		.bg {
+			@include bgc('../image/page2/bg2.png', 582);
+			@include size(582, 520);
+			bottom: p2v(252);
+		}
+		.person {
+			@include bgc('../image/page2/relax.png', 436);
+			@include size(436, 332);
+			bottom: p2v(270);
+			z-index: 1;
+			.leg1 {
+				@include bg('../image/page2/leg1.png');
+				@include size(113, 24);
+				bottom: p2v(110);
+				left: p2v(195);
+			}
+			.leg2 {
+				@include bg('../image/page2/leg2.png');
+				@include size(85, 71);
+				bottom: p2v(120);
+				left: p2v(193);
+			}
+		}
+		.message-container {
+			@include bg('../image/page2/txt-bubbl.png');
+			@include size(363, 119);
+			bottom: p2v(140);
+			right: p2v(140);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			.info {
+				@include bg('../image/page2/txt-life.png');
+				@include size(224, 31);
+			}
+		}
+	}
+	.scroll-page3 {
+		display: none;
+		.bg {
+			@include bgc('../image/page2/bg3.png', 561);
+			@include size(561, 516);
+			bottom: p2v(270);
+		}
+		.person {
+			@include bgc('../image/page2/person.png', 503);
+			@include size(503, 229);
+			bottom: p2v(300);
+			z-index: 1;
+			.word1 {
+				@include bg('../image/page2/word1.png');
+				@include size(92, 83);
+				left: p2v(7);
+				bottom: p2v(194);
+			}
+			.word2 {
+				@include bg('../image/page2/word2.png');
+				@include size(77, 70);
+				left: p2v(115);
+				bottom: p2v(245);
+			}
+			.word3 {
+				@include bg('../image/page2/word3.png');
+				@include size(115, 104);
+				right: p2v(130);
+				bottom: p2v(220);
+			}
+			.word4 {
+				@include bg('../image/page2/word4.png');
+				@include size(79, 73);
+				right: p2v(12);
+				bottom: p2v(230);
+			}
+		}
+		.message-container {
+			@include bg('../image/page2/txt-bubbl.png');
+			@include size(363, 119);
+			bottom: p2v(140);
+			right: p2v(140);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			.info {
+				@include bg('../image/page2/txt-res.png');
+				@include size(224, 31);
+			}
+		}
+	}
+	.sphere {
+		@include bgc('../image/page2/sphere1.png', 640);
+		@include size(640, 356);
+		bottom: p2v(0);
+	}
+	.bear {
+		@include bg('../image/page2/bear1.png');
+		@include size(178, 134);
+		right: p2v(38);
+		bottom: 0;
+	}
+
+	.title {
+		position: absolute;
+		left: p2v(32);
+		top: p2v(32);
+		padding-left: p2v(20);
+		h3 {
+			color: white;
+			font-size: p2v(64);
+		}
+		p {
+			color: white;
+			padding-top: p2v(12);
+			font-size: p2v(24);
+		}
+		.line {
+			height: 100%;
+			width: p2v(5);
+			background-color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}

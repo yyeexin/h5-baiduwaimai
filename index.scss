@@ -1,9 +1,9 @@
 // 引入 normalize
-@import './normalize.scss';
+@import 'normalize.scss';
 // 引入 swiper的 scss
-// @import '../lib/swiper/swiper.min.scss';
+@import '../lib/swiper/swiper.min.scss';
 // 引入 base
-@import './base.scss';
+@import 'base.scss';
 // 设置 高度 100%
 html,
 body {
@@ -12,7 +12,7 @@ body {
 
 // 为了 一会 使用的时候 有提示 写在 index页面中
 //  计算尺寸函数
-@function p2r($size) {
+@function p2v($size) {
 	@return ($size/32) * 1rem;
 }
 
@@ -23,7 +23,7 @@ body {
 	background: url($url) no-repeat center / 100% 100%;
 	position: absolute;
 	left: 50%; // 这里 使用margin-left来实现 左右居中目的是 为了 后面动画中 我们要使用 transform来改变元素
-	margin-left: p2r(-$width/2);
+	margin-left: p2v(-$width/2);
 }
 
 // 直接设置背景图 不考虑居中
@@ -36,8 +36,8 @@ body {
 // 设置 尺寸
 // 传入 宽度 高度
 @mixin size($width, $height) {
-	width: p2r($width);
-	height: p2r($height);
+	width: p2v($width);
+	height: p2v($height);
 }
 
 // loading页面
@@ -52,8 +52,7 @@ body {
 		position: absolute;
 		width: (154/32) * 1rem;
 		height: (121/32) * 1rem;
-		background: url('../image/loading/rider1_.png') no-repeat center / 100%
-			100%;
+		background: url('../image/loading/rider1_.png') no-repeat center / 100% 100%;
 		top: (233/32) * 1rem;
 		right: (108/32) * 1rem;
 	}
@@ -71,8 +70,7 @@ body {
 	.info {
 		width: (220/32) * 1rem;
 		height: (28/32) * 1rem;
-		background: url('../image/loading/loading-txt.png') no-repeat center /
-			100% 100%;
+		background: url('../image/loading/loading-txt.png') no-repeat center / 100% 100%;
 		position: absolute;
 		left: 50%;
 		margin-left: (-220/32/2) * 1rem;
@@ -81,8 +79,7 @@ body {
 	.logo {
 		width: (162/32) * 1rem;
 		height: (39/32) * 1rem;
-		background: url('../image/loading/waimai-logo.png') no-repeat center /
-			100% 100%;
+		background: url('../image/loading/waimai-logo.png') no-repeat center / 100% 100%;
 		position: absolute;
 		bottom: (118/32) * 1rem;
 		left: 50%;
@@ -109,8 +106,7 @@ body {
 	.info {
 		width: (397/32) * 1rem;
 		height: (224/32) * 1rem;
-		background: url('../image/page1/theme-title.png') no-repeat center /
-			100% 100%;
+		background: url('../image/page1/theme-title.png') no-repeat center / 100% 100%;
 		position: absolute;
 		top: (42/32) * 1rem;
 		left: 50%;
@@ -118,8 +114,7 @@ body {
 		.hello {
 			width: (70/32) * 1rem;
 			height: (75/32) * 1rem;
-			background: url('../image/page1/hello.png') no-repeat center / 100%
-				100%;
+			background: url('../image/page1/hello.png') no-repeat center / 100% 100%;
 			position: absolute;
 			top: (20/32) * 1rem;
 			right: (8/32) * 1rem;
@@ -135,8 +130,7 @@ body {
 		.bear {
 			width: 100%;
 			height: 100%;
-			background: url('../image/page1/rider2.png') no-repeat center / 100%
-				100%;
+			background: url('../image/page1/rider2.png') no-repeat center / 100% 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -144,8 +138,7 @@ body {
 		.smoke {
 			width: (167/32) * 1rem;
 			height: (32/32) * 1rem;
-			background: url('../image/page1/jet1.png') no-repeat center / 100%
-				100%;
+			background: url('../image/page1/jet1.png') no-repeat center / 100% 100%;
 			position: absolute;
 			bottom: 0;
 		}
@@ -155,16 +148,14 @@ body {
 		height: (673/32) * 1rem;
 		bottom: 0;
 		position: absolute;
-		background: url('../image/page1/clouds.png') no-repeat center / 100%
-			100%;
+		background: url('../image/page1/clouds.png') no-repeat center / 100% 100%;
 	} // 云
 	.grass1 {
 		width: (640/32) * 1rem;
 		height: (396/32) * 1rem;
 		bottom: 0;
 		position: absolute;
-		background: url('../image/page1/grass1.png') no-repeat center / 100%
-			100%;
+		background: url('../image/page1/grass1.png') no-repeat center / 100% 100%;
 	} // 云
 	.trees {
 		width: (599/32) * 1rem;
@@ -178,8 +169,7 @@ body {
 		height: (228/32) * 1rem;
 		bottom: 0;
 		position: absolute;
-		background: url('../image/page1/grass2.png') no-repeat center / 100%
-			100%;
+		background: url('../image/page1/grass2.png') no-repeat center / 100% 100%;
 	} // 旋转按钮的 容器
 	.rotate-btn-box {
 		width: (208/32) * 1rem;
@@ -194,8 +184,7 @@ body {
 		.btn {
 			width: (124/32) * 1rem;
 			height: (113/32) * 1rem;
-			background: url('../image/page1/bear-btn-aft.png') no-repeat center /
-				100% 100%;
+			background: url('../image/page1/bear-btn-aft.png') no-repeat center / 100% 100%;
 		}
 		.circle1 {
 			width: 100%;
@@ -203,8 +192,7 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: url('../image/page1/circle1.png') no-repeat center /
-				100% 100%;
+			background: url('../image/page1/circle1.png') no-repeat center / 100% 100%;
 		}
 		.circle2 {
 			width: 100%;
@@ -212,8 +200,7 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: url('../image/page1/circle2.png') no-repeat center /
-				100% 100%;
+			background: url('../image/page1/circle2.png') no-repeat center / 100% 100%;
 		}
 	}
 }
@@ -230,21 +217,21 @@ body {
 // 因为都有 title部分 我们直接把title的样式 移到外面
 .title {
 	position: absolute;
-	left: p2r(32);
-	top: p2r(32);
-	padding-left: p2r(20);
+	left: p2v(32);
+	top: p2v(32);
+	padding-left: p2v(20);
 	h3 {
 		color: white;
-		font-size: p2r(64);
+		font-size: p2v(64);
 	}
 	p {
 		color: white;
-		padding-top: p2r(12);
-		font-size: p2r(24);
+		padding-top: p2v(12);
+		font-size: p2v(24);
 	}
 	.line {
 		height: 100%;
-		width: p2r(5);
+		width: p2v(5);
 		background-color: white;
 		position: absolute;
 		top: 0;
@@ -257,21 +244,21 @@ body {
 	background-color: #be8651; // 标题
 	.title {
 		position: absolute;
-		left: p2r(32);
-		top: p2r(32);
-		padding-left: p2r(20);
+		left: p2v(32);
+		top: p2v(32);
+		padding-left: p2v(20);
 		h3 {
 			color: white;
-			font-size: p2r(64);
+			font-size: p2v(64);
 		}
 		p {
 			color: white;
-			padding-top: p2r(12);
-			font-size: p2r(24);
+			padding-top: p2v(12);
+			font-size: p2v(24);
 		}
 		.line {
 			height: 100%;
-			width: p2r(5);
+			width: p2v(5);
 			background-color: white;
 			position: absolute;
 			top: 0;
@@ -282,39 +269,39 @@ body {
 		.bg {
 			@include bgc('../image/page2/bg1.png', 576);
 			@include size(576, 573);
-			bottom: p2r(252);
+			bottom: p2v(252);
 		}
 		.person {
 			@include bgc('../image/page2/front1.png', 439);
 			@include size(439, 349);
-			bottom: p2r(290);
+			bottom: p2v(290);
 			z-index: 1;
 			.files {
 				background-image: url('../image/page2/papers.png');
 				background-repeat: no-repeat;
 				background-position: bottom right;
-				background-size: p2r(115) p2r(114);
+				background-size: p2v(115) p2v(114);
 				@include size(85, 50);
-				bottom: p2r(104);
-				left: p2r(27);
+				bottom: p2v(104);
+				left: p2v(27);
 				position: absolute;
 				.paper1 {
 					background-image: url('../image/page2/papers.png');
 					background-repeat: no-repeat;
-					background-position: 0 p2r(-32);
-					background-size: p2r(115) p2r(114);
+					background-position: 0 p2v(-32);
+					background-size: p2v(115) p2v(114);
 					@include size(86, 26);
-					bottom: p2r(45);
-					left: p2r(-70);
+					bottom: p2v(45);
+					left: p2v(-70);
 					position: absolute;
 				}
 				.paper2 {
 					background-image: url('../image/page2/papers.png');
 					background-repeat: no-repeat;
-					background-position: p2r(-45) 0;
-					background-size: p2r(115) p2r(114);
+					background-position: p2v(-45) 0;
+					background-size: p2v(115) p2v(114);
 					@include size(64, 20);
-					bottom: p2r(80);
+					bottom: p2v(80);
 					right: 0;
 					position: absolute;
 				}
@@ -323,8 +310,8 @@ body {
 		.message-container {
 			@include bg('../image/page2/txt-bubbl.png');
 			@include size(363, 119);
-			bottom: p2r(140);
-			right: p2r(140);
+			bottom: p2v(140);
+			right: p2v(140);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -339,31 +326,31 @@ body {
 		.bg {
 			@include bgc('../image/page2/bg2.png', 582);
 			@include size(582, 520);
-			bottom: p2r(252);
+			bottom: p2v(252);
 		}
 		.person {
 			@include bgc('../image/page2/relax.png', 436);
 			@include size(436, 332);
-			bottom: p2r(270);
+			bottom: p2v(270);
 			z-index: 1;
 			.leg1 {
 				@include bg('../image/page2/leg1.png');
 				@include size(113, 24);
-				bottom: p2r(110);
-				left: p2r(195);
+				bottom: p2v(110);
+				left: p2v(195);
 			}
 			.leg2 {
 				@include bg('../image/page2/leg2.png');
 				@include size(85, 71);
-				bottom: p2r(120);
-				left: p2r(193);
+				bottom: p2v(120);
+				left: p2v(193);
 			}
 		}
 		.message-container {
 			@include bg('../image/page2/txt-bubbl.png');
 			@include size(363, 119);
-			bottom: p2r(140);
-			right: p2r(140);
+			bottom: p2v(140);
+			right: p2v(140);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -378,43 +365,43 @@ body {
 		.bg {
 			@include bgc('../image/page2/bg3.png', 561);
 			@include size(561, 516);
-			bottom: p2r(270);
+			bottom: p2v(270);
 		}
 		.person {
 			@include bgc('../image/page2/person.png', 503);
 			@include size(503, 229);
-			bottom: p2r(300);
+			bottom: p2v(300);
 			z-index: 1;
 			.word1 {
 				@include bg('../image/page2/word1.png');
 				@include size(92, 83);
-				left: p2r(7);
-				bottom: p2r(194);
+				left: p2v(7);
+				bottom: p2v(194);
 			}
 			.word2 {
 				@include bg('../image/page2/word2.png');
 				@include size(77, 70);
-				left: p2r(115);
-				bottom: p2r(245);
+				left: p2v(115);
+				bottom: p2v(245);
 			}
 			.word3 {
 				@include bg('../image/page2/word3.png');
 				@include size(115, 104);
-				right: p2r(130);
-				bottom: p2r(220);
+				right: p2v(130);
+				bottom: p2v(220);
 			}
 			.word4 {
 				@include bg('../image/page2/word4.png');
 				@include size(79, 73);
-				right: p2r(12);
-				bottom: p2r(230);
+				right: p2v(12);
+				bottom: p2v(230);
 			}
 		}
 		.message-container {
 			@include bg('../image/page2/txt-bubbl.png');
 			@include size(363, 119);
-			bottom: p2r(140);
-			right: p2r(140);
+			bottom: p2v(140);
+			right: p2v(140);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -428,12 +415,12 @@ body {
 	.sphere {
 		@include bgc('../image/page2/sphere1.png', 640);
 		@include size(640, 356);
-		bottom: p2r(0);
+		bottom: p2v(0);
 	} // 熊
 	.bear {
 		@include bg('../image/page2/bear1.png');
 		@include size(178, 134);
-		right: p2r(38);
+		right: p2v(38);
 		bottom: 0;
 	}
 }
@@ -443,21 +430,21 @@ body {
 	background-color: #ee4143;
 	.title {
 		position: absolute;
-		left: p2r(32);
-		top: p2r(32);
-		padding-left: p2r(20);
+		left: p2v(32);
+		top: p2v(32);
+		padding-left: p2v(20);
 		h3 {
 			color: white;
-			font-size: p2r(64);
+			font-size: p2v(64);
 		}
 		p {
 			color: white;
-			padding-top: p2r(12);
-			font-size: p2r(24);
+			padding-top: p2v(12);
+			font-size: p2v(24);
 		}
 		.line {
 			height: 100%;
-			width: p2r(5);
+			width: p2v(5);
 			background-color: white;
 			position: absolute;
 			top: 0;
@@ -467,42 +454,42 @@ body {
 	.bg {
 		@include bgc('../image/page3/bg4_.png', 592);
 		@include size(592, 490);
-		bottom: p2r(330);
+		bottom: p2v(330);
 	}
 	.bear {
 		background-image: url('../image/page3/bear2.png');
 		background-repeat: no-repeat;
-		background-size: p2r(368) p2r(427);
-		background-position: p2r(-103) p2r(-96);
+		background-size: p2v(368) p2v(427);
+		background-position: p2v(-103) p2v(-96);
 		position: absolute;
-		bottom: p2r(310);
+		bottom: p2v(310);
 		left: 50%;
 		@include size(227, 336);
-		margin-left: p2r(-227/2);
+		margin-left: p2v(-227/2);
 		z-index: 1;
 		.face1 {
 			@include bg('../image/page3/face1.png');
 			@include size(102, 102);
 			top: 0;
-			left: p2r(-102);
+			left: p2v(-102);
 		}
 		.face2 {
 			@include bg('../image/page3/face2.png');
 			@include size(101, 102);
-			top: p2r(-102);
-			right: p2r(-101/2);
+			top: p2v(-102);
+			right: p2v(-101/2);
 		}
 		.hand-left {
 			@include bg('../image/page3/hand-left_.png');
 			@include size(74, 77);
-			top: p2r(180);
-			left: p2r(30);
+			top: p2v(180);
+			left: p2v(30);
 		}
 		.hand-right {
 			@include bg('../image/page3/hand-right.png');
 			@include size(74, 77);
-			top: p2r(180);
-			right: p2r(30);
+			top: p2v(180);
+			right: p2v(30);
 		}
 	}
 	.sphere {
@@ -513,13 +500,13 @@ body {
 	.table {
 		@include bgc('../image/page3/table.png', 514);
 		@include size(514, 258);
-		bottom: p2r(140);
+		bottom: p2v(140);
 		z-index: 1;
 	} // 食物
 	.food {
 		@include bgc('../image/page3/foods.png', 354);
 		@include size(354, 152);
-		bottom: p2r(330);
+		bottom: p2v(330);
 		z-index: 1;
 	}
 }
@@ -530,12 +517,12 @@ body {
 	.bg {
 		@include bgc('../image/page4/bg5.png', 592);
 		@include size(592, 580);
-		bottom: p2r(300);
+		bottom: p2v(300);
 	}
 	.bear {
 		@include bgc('../image/page4/bear3.png', 206);
 		@include size(206, 321);
-		bottom: p2r(195);
+		bottom: p2v(195);
 		z-index: 1;
 	}
 	.sphere {
@@ -546,19 +533,19 @@ body {
 	.license {
 		@include bg('../image/page4/license.png');
 		@include size(197, 140);
-		bottom: p2r(500);
-		left: p2r(40);
+		bottom: p2v(500);
+		left: p2v(40);
 	}
 	.oil {
 		@include bgc('../image/page4/oil.png', 205);
 		@include size(205, 107);
-		bottom: p2r(660);
+		bottom: p2v(660);
 	}
 	.evil {
 		@include bg('../image/page4/evil2.png');
 		@include size(198, 163);
-		bottom: p2r(480);
-		right: p2r(30);
+		bottom: p2v(480);
+		right: p2v(30);
 	}
 }
 
@@ -568,13 +555,13 @@ body {
 	.bg {
 		@include bgc('../image/page5/bg6.png', 588);
 		@include size(588, 333);
-		bottom: p2r(300);
+		bottom: p2v(300);
 	}
 	.bear {
 		@include bg('../image/page5/bear4.png');
 		@include size(309, 325);
-		bottom: p2r(170);
-		left: p2r(200);
+		bottom: p2v(170);
+		left: p2v(200);
 		z-index: 1;
 	}
 	.sphere {
@@ -585,19 +572,19 @@ body {
 	.card1 {
 		@include bg('../image/page5/card1.png');
 		@include size(160, 175);
-		bottom: p2r(435);
-		left: p2r(32);
+		bottom: p2v(435);
+		left: p2v(32);
 	}
 	.card2 {
 		@include bgc('../image/page5/card2.png', 161);
 		@include size(161, 209);
-		bottom: p2r(530);
+		bottom: p2v(530);
 	}
 	.card3 {
 		@include bg('../image/page5/card3.png');
 		@include size(167, 184);
-		bottom: p2r(420);
-		right: p2r(45);
+		bottom: p2v(420);
+		right: p2v(45);
 	}
 }
 
@@ -607,12 +594,12 @@ body {
 	.bg {
 		@include bgc('../image/page6/bg7.png', 594);
 		@include size(594, 493);
-		bottom: p2r(300);
+		bottom: p2v(300);
 	}
 	.bear {
 		@include bgc('../image/page6/rider2.png', 230);
 		@include size(230, 390);
-		bottom: p2r(175);
+		bottom: p2v(175);
 		z-index: 1;
 		.smoke {
 			@include bgc('../image/page6/shadow.png', 114);
@@ -628,7 +615,7 @@ body {
 	.cloud {
 		@include bgc('../image/page6/weather-cloud.png', 432);
 		@include size(432, 160);
-		bottom: p2r(175+390+80);
+		bottom: p2v(175+390+80);
 	}
 }
 
@@ -638,12 +625,12 @@ body {
 	.bg {
 		@include bgc('../image/page7/bg8.png', 588);
 		@include size(588, 333);
-		bottom: p2r(300);
+		bottom: p2v(300);
 	}
 	.bear {
 		@include bgc('../image/page7/bear5.png', 285);
 		@include size(285, 328);
-		bottom: p2r(200);
+		bottom: p2v(200);
 		z-index: 1;
 		.gift-box {
 			position: absolute;
@@ -656,62 +643,62 @@ body {
 			.gift1 {
 				@include bgc('../image/page7/gift1.png', 35);
 				@include size(35, 29);
-				transform: rotateZ(28deg) translateY(p2r(240));
+				transform: rotateZ(28deg) translateY(p2v(240));
 			}
 			.gift2 {
 				@include bgc('../image/page7/gift2.png', 93);
 				@include size(93, 79);
-				transform: rotateZ(28deg * 2) translateY(p2r(240));
+				transform: rotateZ(28deg * 2) translateY(p2v(240));
 			}
 			.gift3 {
 				@include bgc('../image/page7/gift3.png', 72);
 				@include size(72, 64);
-				transform: rotateZ(28deg * 3) translateY(p2r(240));
+				transform: rotateZ(28deg * 3) translateY(p2v(240));
 			}
 			.gift4 {
 				@include bgc('../image/page7/gift4.png', 91);
 				@include size(91, 73);
-				transform: rotateZ(28deg * 4) translateY(p2r(240));
+				transform: rotateZ(28deg * 4) translateY(p2v(240));
 			}
 			.gift5 {
 				@include bgc('../image/page7/gift5.png', 99);
 				@include size(99, 65);
-				transform: rotateZ(28deg * 5) translateY(p2r(240));
+				transform: rotateZ(28deg * 5) translateY(p2v(240));
 			}
 			.gift6 {
 				@include bgc('../image/page7/gift6.png', 107);
 				@include size(107, 80);
-				transform: rotateZ(28deg * 6) translateY(p2r(240));
+				transform: rotateZ(28deg * 6) translateY(p2v(240));
 			}
 			.gift7 {
 				@include bgc('../image/page7/gift7.png', 107);
 				@include size(107, 80);
-				transform: rotateZ(28deg * 7) translateY(p2r(240));
+				transform: rotateZ(28deg * 7) translateY(p2v(240));
 			}
 			.gift8 {
 				@include bgc('../image/page7/gift8.png', 88);
 				@include size(88, 64);
-				transform: rotateZ(28deg * 8) translateY(p2r(240));
+				transform: rotateZ(28deg * 8) translateY(p2v(240));
 			}
 			.gift9 {
 				@include bgc('../image/page7/gift9.png', 78);
 				@include size(78, 50);
-				transform: rotateZ(28deg * 9) translateY(p2r(240));
+				transform: rotateZ(28deg * 9) translateY(p2v(240));
 			}
 			.gift10 {
 				@include bgc('../image/page7/gift10.png', 49);
 				@include size(49, 37);
-				transform: rotateZ(28deg * 10) translateY(p2r(240));
+				transform: rotateZ(28deg * 10) translateY(p2v(240));
 			}
 			.gift11 {
 				@include bgc('../image/page7/gift11.png', 51);
 				@include size(51, 31);
-				transform: rotateZ(28deg * 11) translateY(p2r(240));
+				transform: rotateZ(28deg * 11) translateY(p2v(240));
 			}
 			.gift12 {
 				@include bgc('../image/page7/gift12.png', 37);
 				@include size(37, 23);
-				transform: rotateZ(28deg * 12-5deg) translateY(p2r(240));
+				transform: rotateZ(28deg * 12-5deg) translateY(p2v(240));
 			}
 		}
 	}
@@ -728,39 +715,39 @@ body {
 	.streetlight {
 		@include bg('../image/page8/streetlight.png');
 		@include size(80, 443);
-		bottom: p2r(300);
-		left: p2r(240);
+		bottom: p2v(300);
+		left: p2v(240);
 		.light {
 			@include bg('../image/page8/lamplight.png');
 			@include size(437, 427);
-			top: p2r(10);
-			left: p2r(-140);
+			top: p2v(10);
+			left: p2v(-140);
 		}
 	}
 	.bear {
 		@include bg('../image/page8/bear6.png');
 		@include size(276, 271);
-		left: p2r(230);
-		bottom: p2r(280);
+		left: p2v(230);
+		bottom: p2v(280);
 	}
 	.motobike {
 		@include bg('../image/page8/moto.png');
 		@include size(200, 137);
-		bottom: p2r(335);
-		left: p2r(110);
+		bottom: p2v(335);
+		left: p2v(110);
 	}
 	.share {
 		@include bgc('../image/page8/share.png', 379);
 		@include size(379, 113);
-		bottom: p2r(140);
+		bottom: p2v(140);
 	}
 	.info {
 		position: absolute;
 		width: 100%;
 		text-align: center;
-		font-size: p2r(24);
+		font-size: p2v(24);
 		color: #b579d6;
-		bottom: p2r(70);
+		bottom: p2v(70);
 	}
 	.sphere {
 		@include bg('../image/page8/sphere7.png');
@@ -783,34 +770,34 @@ body {
 // 熊开车动画
 @keyframes bearRide {
 	10% {
-		transform: translateX(p2r(-26 * 1)) translateY(p2r(-10));
+		transform: translateX(p2v(-26 * 1)) translateY(p2v(-10));
 	}
 	20% {
-		transform: translateX(p2r(-26 * 2)) translateY(p2r(10));
+		transform: translateX(p2v(-26 * 2)) translateY(p2v(10));
 	}
 	30% {
-		transform: translateX(p2r(-26 * 3)) translateY(p2r(-10));
+		transform: translateX(p2v(-26 * 3)) translateY(p2v(-10));
 	}
 	40% {
-		transform: translateX(p2r(-26 * 4)) translateY(p2r(10));
+		transform: translateX(p2v(-26 * 4)) translateY(p2v(10));
 	}
 	50% {
-		transform: translateX(p2r(-26 * 5)) translateY(p2r(-10));
+		transform: translateX(p2v(-26 * 5)) translateY(p2v(-10));
 	}
 	60% {
-		transform: translateX(p2r(-26 * 6)) translateY(p2r(10));
+		transform: translateX(p2v(-26 * 6)) translateY(p2v(10));
 	}
 	70% {
-		transform: translateX(p2r(-26 * 7)) translateY(p2r(-10));
+		transform: translateX(p2v(-26 * 7)) translateY(p2v(-10));
 	}
 	80% {
-		transform: translateX(p2r(-26 * 8)) translateY(p2r(10));
+		transform: translateX(p2v(-26 * 8)) translateY(p2v(10));
 	}
 	90% {
-		transform: translateX(p2r(-26 * 9)) translateY(p2r(-10));
+		transform: translateX(p2v(-26 * 9)) translateY(p2v(-10));
 	}
 	100% {
-		transform: translateX(p2r(-26 * 10)) translateY(p2r(10));
+		transform: translateX(p2v(-26 * 10)) translateY(p2v(10));
 	}
 }
 
@@ -847,7 +834,7 @@ body {
 	from {
 	}
 	to {
-		height: p2r(396);
+		height: p2v(396);
 	}
 }
 // 页面2 草2 动画 大-> 小
@@ -923,7 +910,7 @@ body {
 // 欢迎页的默认样式
 .welcome {
 	.grass1 {
-		height: p2r(20);
+		height: p2v(20);
 	}
 	.grass2 {
 		opacity: 0;

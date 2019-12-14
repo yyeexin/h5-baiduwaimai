@@ -1,0 +1,30 @@
+.page5 {
+	position: relative;
+	background-color: #0098cf;
+	.bg {
+		@include bgc('../image/page6/bg7.png', 594);
+		@include size(594, 493);
+		bottom: p2v(300);
+	}
+	.bear {
+		@include bgc('../image/page6/rider2.png', 230);
+		@include size(230, 390);
+		bottom: p2v(175);
+		z-index: 1;
+		.smoke {
+			@include bgc('../image/page6/shadow.png', 114);
+			@include size(114, 26);
+			bottom: 0;
+		}
+	}
+	.sphere {
+		@include bg('../image/page6/sphere5.png');
+		@include size(640, 356);
+		bottom: 0;
+	}
+	.cloud {
+		@include bgc('../image/page6/weather-cloud.png', 432);
+		@include size(432, 160);
+		bottom: p2v(175+390+80);
+	}
+}

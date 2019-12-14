@@ -1,0 +1,147 @@
+@import './normalize.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// tap高亮 一般给透明即可
+	-webkit-tap-highlight-color: transparent;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: block;
+	line-height: 0;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+
+@function p2v($size) {
+	@return ($size/640) * 100vw;
+}
+
+@mixin bgc($url, $width) {
+	background: url($url) no-repeat center / 100% 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: p2v(-$width/2);
+}
+
+@mixin bg($url) {
+	background: url($url) no-repeat center / 100% 100%;
+	position: absolute;
+}
+
+@mixin size($width, $height) {
+	width: p2v($width);
+	height: p2v($height);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+@import './page0.loading.scss';
+@import './page0.welcome.scss';
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.title {
+	position: absolute;
+	left: p2v(32);
+	top: p2v(32);
+	padding-left: p2v(20);
+	h3 {
+		color: white;
+		font-size: p2v(64);
+	}
+	p {
+		color: white;
+		padding-top: p2v(12);
+		font-size: p2v(24);
+	}
+	.line {
+		height: 100%;
+		width: p2v(5);
+		background-color: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.title {
+	h3 {
+		opacity: 0;
+	}
+	p {
+		opacity: 0;
+	}
+	.line {
+		height: 0 !important;
+	}
+}
+
+@keyframes right2left {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes heightBigger {
+	from {
+	}
+	to {
+		height: 100%;
+	}
+}
+
+.swiper-slide.animate {
+	.title {
+		h3 {
+			animation: right2left 0.5s forwards;
+		}
+		p {
+			animation: right2left 0.5s 0.2s forwards;
+		}
+		.line {
+			animation: heightBigger 0.5s 0.5s forwards;
+		}
+	}
+}
+
+@import './page1.scss';
+@import './page2.scss';
+@import './page3.scss';
+@import './page4.scss';
+@import './page5.scss';
+@import './page6.scss';
+@import './page7.scss';
