@@ -12,6 +12,29 @@
 		bottom: p2v(195);
 		z-index: 1;
 	}
+	.animate-bear-box {
+		.animate-bear1 {
+			@include bgc('../image/page4/bear3-1-1.png', 251);
+			bottom: p2v(195);
+			@include size(251, 335);
+			z-index: 1;
+			opacity: 0;
+		}
+		.animate-bear2 {
+			@include bgc('../image/page4/bear3-2-1.png', 215);
+			bottom: p2v(195);
+			@include size(215, 313);
+			z-index: 1;
+			opacity: 0;
+		}
+		.animate-bear3 {
+			@include bgc('../image/page4/bear3-3-1.png', 290);
+			bottom: p2v(195);
+			@include size(290, 321);
+			z-index: 1;
+			opacity: 0;
+		}
+	}
 	.sphere {
 		@include bg('../image/page4/sphere3.png');
 		@include size(640, 356);
@@ -33,5 +56,40 @@
 		@include size(198, 163);
 		bottom: p2v(480);
 		right: p2v(30);
+	}
+
+	.bg {
+		opacity: 0;
+		transform-origin: 50% 200%;
+	}
+	.bear {
+		opacity: 0;
+	}
+	.license {
+		opacity: 0;
+	}
+	.oil {
+		opacity: 0;
+	}
+	.evil {
+		opacity: 0;
+	}
+}
+
+.page3.animate {
+	.bg {
+		animation: rotateInNotOut 0.5s forwards;
+	}
+	.bear {
+		animation: bearDown 0.5s 0.5s forwards;
+	}
+	.license {
+		animation: small2big2small 0.5s 1s forwards, runUpDownLeftRight 1s 1.5s infinite;
+	}
+	.oil {
+		animation: small2big2small 0.5s 1s forwards, runUpDownLeftRight 2s 1.5s infinite;
+	}
+	.evil {
+		animation: small2big2small 0.5s 1s forwards, runUpDownLeftRight 1.5s 1.5s infinite;
 	}
 }

@@ -59,4 +59,105 @@
 		bottom: p2v(330);
 		z-index: 1;
 	}
+
+	.bear {
+		opacity: 0;
+		.face1 {
+			opacity: 0;
+		}
+		.face2 {
+			opacity: 0;
+		}
+		.hand-left {
+			transform-origin: left top;
+		}
+		.hand-right {
+			transform-origin: right top;
+		}
+	}
+	.table {
+		opacity: 0;
+	}
+	.food {
+		opacity: 0;
+	}
+	.bg {
+		opacity: 0;
+		transform-origin: 50% 200%;
+	}
+}
+
+.page2.animate {
+	.bg {
+		animation: rotateInNotOut 0.5s forwards;
+	}
+	.table {
+		animation: bearDown 0.5s 0.5s forwards;
+	}
+	.bear {
+		animation: bottom2Top 0.5s 1s forwards;
+		.face1 {
+			animation: small2big2small 0.5s 2s forwards;
+		}
+		.face2 {
+			animation: small2big2small 0.5s 2s forwards;
+		}
+		.hand-left {
+			animation: leftShake 0.3s infinite;
+		}
+		.hand-right {
+			animation: rightShake 0.5s infinite;
+		}
+	}
+	.food {
+		animation: bearDown 1.5s 0.5s forwards;
+	}
+}
+
+@keyframes bottom2Top {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes small2big2small {
+	from {
+		transform: scale(0, 0);
+	}
+	95% {
+		transform: scale(1.2, 1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes leftShake {
+	30% {
+		transform: rotateZ(10deg);
+	}
+	60% {
+		transform: rotateZ(-10deg);
+	}
+	100% {
+		transform: none;
+	}
+}
+
+@keyframes rightShake {
+	30% {
+		transform: rotateZ(10deg);
+	}
+	60% {
+		transform: rotateZ(-10deg);
+	}
+	100% {
+		transform: none;
+	}
 }

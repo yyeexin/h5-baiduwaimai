@@ -14,6 +14,16 @@ var swiper = new Swiper('.swiper-container', {
 				.addClass('animate')
 				.siblings()
 				.removeClass('animate')
+
+			if (this.activeIndex === 2) {
+				$('.swiper-slide')
+					.eq(2)
+					.addClass('swiper-no-swiping')
+				$('.swiper-slide')
+					.eq(2)
+					.children('.bear')
+					.css('animation', 'bearDown 0.5s 0.5s forwards')
+			}
 		}
 	}
 })
@@ -33,3 +43,26 @@ $('.welcome .rotate-btn-box').longTap(function() {
 		})
 	}, 1000)
 })
+
+$('.swiper-slide')
+	.eq(2)
+	.click(function() {
+		$(this).removeClass('swiper-no-swiping')
+
+		$('.swiper-slide')
+			.eq(2)
+			.children('.bear')
+			.css('animation', 'none')
+
+		var index = 0
+		var timer = setInterval(() => {
+			$('.animate-bear-box div').css('opacity', 0)
+			$('.animate-bear-box div')
+				.eq(index)
+				.css('opacity', 1)
+			index++
+		}, 1000)
+		setTimeout(() => {
+			clearInterval(timer)
+		}, 4000)
+	})
