@@ -15,10 +15,6 @@
 			position: absolute;
 			top: 0;
 			left: 50%;
-			/*
-                为了错开 熊腿 旋转的 角度 不能转满 360%
-                350 / 12 =29
-            */
 			.gift1 {
 				@include bgc('../image/page7/gift1.png', 35);
 				@include size(35, 29);
@@ -80,10 +76,99 @@
 				transform: rotateZ(28deg * 12-5deg) translateY(p2v(240));
 			}
 		}
+		.gift-box {
+			> div:nth-child(1) {
+				@include size(35, 29);
+				// transform: rotateZ(28deg) translateY(p2v(240));
+			}
+			> div:nth-child(2) {
+				@include size(93, 79);
+				// transform: rotateZ(28deg * 2) translateY(p2v(240));
+			}
+			> div:nth-child(3) {
+				@include size(72, 64);
+				// transform: rotateZ(28deg * 3) translateY(p2v(240));
+			}
+			> div:nth-child(4) {
+				@include size(91, 73);
+				// transform: rotateZ(28deg * 4) translateY(p2v(240));
+			}
+			> div:nth-child(5) {
+				@include size(99, 65);
+				// transform: rotateZ(28deg * 5) translateY(p2v(240));
+			}
+			> div:nth-child(6) {
+				@include size(107, 80);
+				// transform: rotateZ(28deg * 6) translateY(p2v(240));
+			}
+			> div:nth-child(7) {
+				@include size(107, 80);
+				// transform: rotateZ(28deg * 7) translateY(p2v(240));
+			}
+			> div:nth-child(8) {
+				@include size(88, 64);
+				// transform: rotateZ(28deg * 8) translateY(p2v(240));
+			}
+			> div:nth-child(9) {
+				@include size(78, 50);
+				// transform: rotateZ(28deg * 9) translateY(p2v(240));
+			}
+			> div:nth-child(10) {
+				@include size(49, 37);
+				// transform: rotateZ(28deg * 10) translateY(p2v(240));
+			}
+			> div:nth-child(11) {
+				@include size(51, 31);
+				// transform: rotateZ(28deg * 11) translateY(p2v(240));
+			}
+			> div:nth-child(12) {
+				@include size(37, 23);
+				// transform: rotateZ(28deg * 12-5deg) translateY(p2v(240));
+			}
+		}
 	}
 	.sphere {
 		@include bg('../image/page7/sphere6.png');
 		@include size(640, 356);
 		bottom: 0;
+	}
+
+	.gift-box > div {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+.page6.animate {
+	@for $i from 1 to 12 {
+		.gift-box > div:nth-child(#{$i}) {
+			animation: none2Normal 2s $i * 0.1s infinite;
+		}
+	}
+
+	@for $i from 1 to 12 {
+		.gift-box > div:nth-child(#{$i}) > div {
+			animation: rotate 1s ($i * 0.1s) infinite;
+		}
+	}
+}
+
+@keyframes none2Normal {
+	from {
+		transform: none;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes big2small {
+	from {
+	}
+	to {
+		transform: scale(0, 0);
+		opacity: 0;
 	}
 }

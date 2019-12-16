@@ -35,4 +35,41 @@
 		bottom: p2v(420);
 		right: p2v(45);
 	}
+
+	.bg {
+		opacity: 0;
+		transform-origin: 50% 200%;
+	}
+
+	.bear {
+		opacity: 0;
+	}
+
+	.card1 {
+		opacity: 0;
+	}
+	.card2 {
+		opacity: 0;
+	}
+	.card3 {
+		opacity: 0;
+	}
+}
+
+.page4.animate {
+	.bg {
+		animation: rotateInNotOut 0.5s forwards;
+	}
+	.bear {
+		animation: bearDown 0.5s 0.5s forwards;
+	}
+	.card1 {
+		animation: small2big2small 0.5s 1s forwards;
+	}
+	.card2 {
+		animation: small2big2small 0.5s 1s forwards;
+	}
+	.card3 {
+		animation: small2big2small 0.5s 1s forwards;
+	}
 }

@@ -14,6 +14,11 @@ ol {
 a {
 	text-decoration: none;
 }
+
+input {
+	border: none;
+	outline: none;
+}
 .fl {
 	float: left;
 }
@@ -146,3 +151,12 @@ body {
 @import './page5.scss';
 @import './page6.scss';
 @import './page7.scss';
+
+.audioControl {
+	@include size(36, 36);
+	position: absolute;
+	top: p2v(32);
+	right: p2v(32);
+	background: url('../image/play.png') no-repeat center / 100% 100%;
+	z-index: 998;
+}

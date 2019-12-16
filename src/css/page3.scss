@@ -35,6 +35,29 @@
 			opacity: 0;
 		}
 	}
+
+	.hit-card-box {
+		.card1 {
+			@include bg('../image/page4/license1.png');
+			@include size(228, 151);
+			bottom: p2v(500);
+			left: p2v(40);
+			opacity: 0;
+		}
+		.card2 {
+			@include bgc('../image/page4/oil1.png', 231);
+			@include size(231, 156);
+			bottom: p2v(660);
+			opacity: 0;
+		}
+		.card3 {
+			@include bg('../image/page4/evil21.png');
+			@include size(228, 151);
+			bottom: p2v(480);
+			right: p2v(30);
+			opacity: 0;
+		}
+	}
 	.sphere {
 		@include bg('../image/page4/sphere3.png');
 		@include size(640, 356);
