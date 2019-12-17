@@ -20,7 +20,6 @@ var swiper = new Swiper('.swiper-container', {
 					.addClass('swiper-no-swiping')
 			}
 			if (swiper.previousIndex == 2) {
-				console.log('111')
 				$('.swiper-slide')
 					.eq(2)
 					.find('.bear')
@@ -40,8 +39,7 @@ $('.loading .step').on('animationend', function() {
 	})
 })
 
-// $('.welcome .rotate-btn-box').longTap(function() {
-$('.welcome .rotate-btn-box').click(function() {
+$('.welcome .rotate-btn-box').longTap(function() {
 	$('.bear-box').css('animation', 'bearDisappear 1s forwards')
 	setTimeout(() => {
 		$('.welcome').fadeOut(1000, function() {
@@ -88,9 +86,13 @@ var audioDom = document.querySelector('audio')
 $('.audioControl').click(function() {
 	if (audioDom.paused) {
 		audioDom.play()
-		$(this).css('background-image', 'url("../image/pause.png")')
+		$(this)
+			.removeClass('pause')
+			.addClass('play')
 	} else {
 		audioDom.pause()
-		$(this).css('background-image', 'url("../image/play.png")')
+		$(this)
+			.removeClass('play')
+			.addClass('pause')
 	}
 })

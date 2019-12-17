@@ -157,6 +157,11 @@ body {
 	position: absolute;
 	top: p2v(32);
 	right: p2v(32);
-	background: url('../image/play.png') no-repeat center / 100% 100%;
 	z-index: 998;
+}
+.audioControl.play {
+	background: url('../image/play.png') no-repeat center / 100% 100%;
+}
+.audioControl.pause {
+	background: url('../image/pause.png') no-repeat center / 100% 100%;
 }
