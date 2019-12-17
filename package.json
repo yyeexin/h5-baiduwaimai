@@ -9,7 +9,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "parcel ./src/index.html --open",
-		"push": "git add . && git commit -m \"commit\" && git pull && git push"
+		"push": "git add . && git commit -m \"commit\" && git pull && git push",
+		"build": "parcel build ./src/index.html --no-source-maps --public-url ./"
 	},
 	"repository": {
 		"type": "git",
@@ -26,6 +27,7 @@
 		"swiper": "^5.2.1"
 	},
 	"devDependencies": {
+		"cssnano": "^4.1.10",
 		"sass": "^1.23.7"
 	}
 }
